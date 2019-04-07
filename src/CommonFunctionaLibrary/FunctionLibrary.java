@@ -151,6 +151,49 @@ return driver;
 									driver.findElement(By.className(locatorValue)).sendKeys(data);
 								}
 	}//typeAction
+	
+	public static void typeText(WebDriver driver,String locatorType,String locatorValue,String data)
+	{
+	if (locatorType.equalsIgnoreCase("id")) 
+	{
+		driver.findElement(By.id(locatorValue)).sendKeys(" "+data);
+	}	
+	else
+		if (locatorType.equalsIgnoreCase("name")) 
+		{
+			driver.findElement(By.name(locatorValue)).sendKeys(" "+data);
+		}
+		else
+			if (locatorType.equalsIgnoreCase("xpath")) 
+			{
+			driver.findElement(By.xpath(locatorValue)).sendKeys(" "+data);
+			}
+			else
+				if (locatorType.equalsIgnoreCase("cssSelector")) 
+				{
+					driver.findElement(By.cssSelector(locatorValue)).sendKeys(" "+data);
+				}
+				else
+					if (locatorType.equalsIgnoreCase("linkText")) 
+					{
+						driver.findElement(By.linkText(locatorValue)).sendKeys(" "+data);
+					}
+					else
+						if (locatorType.equalsIgnoreCase("partialLinkText"))
+						{
+							driver.findElement(By.partialLinkText(locatorValue)).sendKeys(" "+data);
+						}
+						else
+							if (locatorType.equalsIgnoreCase("tagName"))
+							{
+								driver.findElement(By.tagName(locatorValue)).sendKeys(" "+data);
+							}
+							else
+								if (locatorType.equalsIgnoreCase("className")) 
+								{
+									driver.findElement(By.className(locatorValue)).sendKeys(" "+data);
+								}
+	}//typeText
    
 	//Click on webElement
 	public static void clickAction(WebDriver driver,String locatorType,String locatorValue)

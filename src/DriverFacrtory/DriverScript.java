@@ -71,6 +71,11 @@ public class DriverScript {
 						FunctionLibrary.typeAction(driver, Locator_Type, Locator_Value, Test_Data);
 						logger.log(LogStatus.INFO, Descriptions);
 					}
+					if (Object_Type.equalsIgnoreCase("typeText"))
+					{
+						FunctionLibrary.typeText(driver, Locator_Type, Locator_Value, Test_Data);
+						logger.log(LogStatus.INFO, Descriptions);
+					}
 					if (Object_Type.equalsIgnoreCase("clickAction"))
 					{
 						FunctionLibrary.clickAction(driver, Locator_Type, Locator_Value);
